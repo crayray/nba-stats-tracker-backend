@@ -1,4 +1,4 @@
-class Api::V1::ScoresController < ApplicationController
+class UserTeamsController < ApplicationController
     def index 
         @user_teams = User_teams.all 
         render json: @user_teams, include: :user

@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  # root :to => 'home#index'
+  resources :user_teams
+ #sign in / sign out / login boolean to confirm that user is authenticated 
+ post '/login', to: 'sessions#create'
+ delete '/logout', to: 'sessions#destroy'
+ get '/logged_in', to: 'sessions#is_logged_in?'
+   
+  
+ #users can create a new user, see that user, and all other users(api?) might need edit, if user needs to update info
+ resources :users, only: [:create, :show, :index]
+  
   root to: "static#home"
-  namespace :api do
-    namespace :v1 do
-      resources :users
-      resources :user_teams
-      resources :sessions, only: [:create]
-
-      delete :logout, to: "sessions#logout"
-      get :logged_in, to: "sessions#logged_in"
-    end
-  end
 end
