@@ -1,7 +1,8 @@
-class Api::V1::ScoresController < ApplicationController
+class UserTeamsController < ApplicationController
+    skip_before_action :authorized
     def index 
-        @user_teams = User_teams.all 
-        render json: @user_teams, include: :user
+        user_teams = User_team.all 
+        render json: user_teams
         #books to a relationship in ur database, can call all the books related to a user
     end
 
@@ -13,6 +14,6 @@ class Api::V1::ScoresController < ApplicationController
     private
 
     def user_team_params
-        params.permit(:user_id, :team)
+        params.require(:user_team).permit(:user_id, :team)
     end
 end
