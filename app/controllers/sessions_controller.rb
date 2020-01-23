@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   include CurrentUserConcern
-  
+  def index
+    render json: {status: "It's working..."}
+  end
+
   def create
     user = User.find_by(username: params["username"]).try(:authenticate, params["user"]["password"])
 
@@ -16,7 +19,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  def logged_in
+  def is_logged_in
     if @current_user
       render json: {
         logged_in: true,
