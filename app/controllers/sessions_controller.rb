@@ -1,13 +1,13 @@
 class SessionsController < ApplicationController
   include CurrentUserConcern
-  def index
-    render json: {status: "It's working..."}
-  end
+  # def index
+  #   render json: {status: "It's working..."}
+  # end
 
   def create
-    user = User.find_by(username: params["username"]).try(:authenticate, params["user"]["password"])
-
-    if user
+    user = User.find_by(username: params["username"])
+    
+    if user && user.authenticate 
       session[:user_id] = user.id 
       render json: {
         status: :created,
