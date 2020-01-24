@@ -1,14 +1,14 @@
 class UserTeamsController < ApplicationController
     skip_before_action :authorized
     def index 
-        user_teams = User_team.all 
+        user_teams = UserTeam.all 
         render json: user_teams
         #books to a relationship in ur database, can call all the books related to a user
     end
 
     def create
-        @new = User_team.create(user_team_params)
-        puts @new
+        @new = UserTeam.create(user_team_params)
+        render json: {user_teams: UserTeamSerializer.new(@new)}, status: :created
     end
 
     private
