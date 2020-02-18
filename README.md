@@ -1,24 +1,7 @@
-# README
+This app was created to keep track of your fav NBA teams. If you are as big of fans as we are then you know it is hard to watch every game to see how your favorite players are doing, so we created this app to help with that.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To use this app you must fork this repository and run bundle install. You must do the same thing with the frontend part of this app(linked in the desription) and run npm install. Next set up the database with rails db:migrate and then rails db:seed. Run the backend with rails s and run the frontend with npm start. Now your app should be up and running and ready to use.
 
-Things you may want to cover:
+Created by: Mason Waller and Rachel Fuerst
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Demo: https://www.youtube.com/watch?v=CA_7VQVVUD8
