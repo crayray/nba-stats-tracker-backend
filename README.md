@@ -1,7 +1,58 @@
-This app was created to keep track of your fav NBA teams. If you are as big of fans as we are then you know it is hard to watch every game to see how your favorite players are doing, so we created this app to help with that.
+ScienceMaster
+====================================
 
-To use this app you must fork this repository and run bundle install. You must do the same thing with the frontend part of this app(linked in the desription) and run npm install. Next set up the database with rails db:migrate and then rails db:seed. Run the backend with rails s and run the frontend with npm start. Now your app should be up and running and ready to use.
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Credits](#credits)
 
-Created by: Mason Waller and Rachel Fuerst
+---
 
-Demo: https://www.youtube.com/watch?v=CA_7VQVVUD8
+## General info
+This is the  API for the [BGFC app](https://github.com/crayray/bgfc-frontend-react). Please follow the installation steps here and then refer the frontend repo for more details. 
+
+
+---
+
+## Technologies
+This is a single page app that loads all data via Javascript/React on the front end. It retrieves data from our Ruby on Rails API. The data is stored in a PostgreSQL database. 
+
+
+## Requirements
+This app will require the following:
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+
+## Installation
+Run bundle install:
+```
+// ♥ bundle install
+```
+Migrate the database to create the schema:
+```
+// ♥ rails db:migrate
+```
+Seed the database to get the questions and answers:
+```
+// ♥ rails db:seed
+```
+Start the server and load the site on localhost:3000:
+```
+// ♥ rails s
+```
+
+## Credits
+
+
+The humble developers who built this app:
+
+
+**Rachel Fuerst** [LinkedIn](https://www.linkedin.com/in/rachfuerst) // [Github](https://github.com/crayray)
+
+&
+
+**Mason Waller** [LinkedIn](https://www.linkedin.com/in/mason-waller-49a087196/) // [Github](https://github.com/masonwaller)
+
