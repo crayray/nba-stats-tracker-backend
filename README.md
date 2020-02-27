@@ -1,4 +1,4 @@
-ScienceMaster
+NBA Stats Tracker App - Backend
 ====================================
 
 ## Table of contents
@@ -11,7 +11,7 @@ ScienceMaster
 ---
 
 ## General info
-This is the  API for the [BGFC app](https://github.com/crayray/bgfc-frontend-react). Please follow the installation steps here and then refer the frontend repo for more details. 
+This is the  API for the [NBA Stats Tracker app](https://github.com/crayray/nba-stats-tracker-react). Please follow the installation steps here and then refer the frontend repo for more details. 
 
 
 ---
